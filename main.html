@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>3-Clue Guessing Game</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#141e30,#243b55);
+}
+.game-box{
+    width:360px;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    color:#fff;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(15px);
+    box-shadow:0 10px 40px rgba(0,0,0,0.4);
+}
+h1{margin-bottom:20px;}
+input{
+    width:100%;
+    padding:12px;
+    border-radius:10px;
+    border:none;
+    outline:none;
+    text-align:center;
+    font-size:16px;
+}
+button{
+    width:100%;
+    margin-top:12px;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    color:white;
+    background:linear-gradient(135deg,#ff512f,#dd2476);
+}
+button:hover{
+    transform:scale(1.02);
+}
+#result{
+    margin-top:15px;
+    font-size:18px;
+    font-weight:bold;
+}
+#clue{
+    margin-top:10px;
+    padding:12px;
+    border-radius:10px;
+    background:rgba(0,0,0,0.35);
+    font-size:15px;
+    color:#ffeb3b;
+}
+</style>
+</head>
+
+<body>
+
+<div class="game-box">
+<h1>🧠 Guess the Number</h1>
+<input id="guessnumber" placeholder="Enter number (1–10)">
+<button onclick="checkGuess()">Submit</button>
+<p id="result"></p>
+<p id="clue"></p>
+</div>
+
+<script>
+let randomNumber = Math.floor(Math.random()*10)+1;
+let wrongCount = 0;
+
+const clues = {
+1:[
+    "The only one of its kind",
+    "Count of moons Earth has",
+    "The beginning of all counting"
+],
+2:[
+    "Needed to make a pair",
+    "Minimum points for a straight line",
+    "Eyes on a human face"
+],
+3:[
+    "Basic spatial reality",
+    "Traffic signal colors",
+    "Sides of a triangle"
+],
+4:[
+    "Navigation essential",
+    "Letters in 'Math'",
+    "Wheels in most cars"
+],
+5:[
+    "Used to hold things",
+    "Common rating scale",
+    "Fingers on one hand"
+],
+6:[
+    "Casino favorite",
+    "Faces on a cube",
+    "Maximum on dice"
+],
+7:[
+    "Indian cricket legend",
+    "Captain Cool",
+    "🏏 Jersey number"
+],
+8:[
+    "Common road symbol shape",
+    "Spider anatomy",
+    "Sides of an octagon"
+],
+9:[
+    "Classic board game",
+    "Perfect square",
+    "3 × 3"
+],
+10:[
+    "Counting system base",
+    "Digits on both hands",
+    "End of single digits"
+]
+};
+
+function checkGuess(){
+    const guess = Number(document.getElementById("guessnumber").value);
+    const result = document.getElementById("result");
+    const clueBox = document.getElementById("clue");
+
+    if(guess === randomNumber){
+        result.textContent = "🎉 Correct! Brilliant!";
+        result.style.color = "#00ffcc";
+        clueBox.textContent = "";
+        resetGame();
+    }else{
+        result.textContent = "❌ Wrong guess!";
+        result.style.color = "#ffb3b3";
+        if(wrongCount < 3){
+            clueBox.textContent = "💡 Clue " + (wrongCount+1) + ": " + clues[randomNumber][wrongCount];
+            wrongCount++;
+        }
+    }
+}
+
+function resetGame(){
+    randomNumber = Math.floor(Math.random()*10)+1;
+    wrongCount = 0;
+    document.getElementById("guessnumber").value = "";
+}
+</script>
+
+</body>
+</html>
