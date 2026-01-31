@@ -1,4 +1,4 @@
-🎯 Project Overview
+# 🎯 Project Overview
 
 This game randomly generates a number between 1 and 10.
 If the user guesses wrong, the game provides step-by-step clues to guide the player toward the correct answer.
