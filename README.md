@@ -5,7 +5,7 @@ If the user guesses wrong, the game provides step-by-step clues to guide the pla
 
 The difficulty increases with each wrong attempt, making the game fun, challenging, and educational.
 
-# ✨ Features
+## ✨ Features
 
 🔢 Random number generation (1–10)
 
@@ -17,7 +17,7 @@ Clue 2 → Medium
 
 Clue 3 → Tough
 
-# 🎨 Modern Glassmorphism UI
+## 🎨 Modern Glassmorphism UI
 
 📱 Responsive & mobile-friendly design
 
@@ -25,7 +25,7 @@ Clue 3 → Tough
 
 🏏 Fun cultural reference (e.g., Dhoni jersey number for 7)
 
-# 🧩 Game Logic
+## 🧩 Game Logic
 Attempt	What Happens
 1st wrong guess	Clue 1 is shown
 2nd wrong guess	Clue 2 is shown
@@ -39,7 +39,7 @@ CSS3 – Styling & UI effects
 
 JavaScript (ES6) – Game logic
 
-# 📂 Project Structure
+## 📂 Project Structure
 guess-the-number/
 │
 ├── index.html
@@ -48,7 +48,7 @@ guess-the-number/
 
 All code is written in a single HTML file for simplicity.
 
-# 🚀 How to Run the Project
+## 🚀 How to Run the Project
 
 Clone the repository
 
@@ -61,7 +61,7 @@ Double-click index.html
 
 Play the game in your browser 🎮
 
-# 🎮 How to Play
+## 🎮 How to Play
 
 Enter a number between 1 and 10
 
@@ -74,7 +74,7 @@ Think logically and guess again
 Guess correctly to win 🎉
 
 
-# 🔮 Future Enhancements
+## 🔮 Future Enhancements
 
 ⏱️ Timer-based challenge
 
@@ -84,12 +84,11 @@ Guess correctly to win 🎉
 
 📱 Convert into mobile app
 
-# 👩‍💻 Author
+## 👩‍💻 Author
 
-# TAMILARASI G👈👈
+## TAMILARASI G👈👈
 Student | Web Development Enthusiast
-# 💡 Learning JavaScript by building real projects
 
-# 📜 License
+## 💡 Learning JavaScript by building real projects
 
 This project is open-source and free to use for learning and educational purposes.
